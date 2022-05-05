@@ -7,7 +7,7 @@ package modelo;
 public class Pessoa {
 
     //declaração das variáveis
-    private String nome, sobrenome, cpf, rg, endereco, telefone;
+    private String nome, cpf, rg, endereco, telefone;
     
     public String getNome() 
     {
@@ -17,16 +17,6 @@ public class Pessoa {
     public void setNome(String nome) 
     {
         this.nome = nome;
-    }
-
-    public String getSobrenome() 
-    {
-        return sobrenome;
-    }
-
-    public void setSobrenome(String sobrenome) 
-    {
-        this.sobrenome = sobrenome;
     }
 
     public String getCpf() 
