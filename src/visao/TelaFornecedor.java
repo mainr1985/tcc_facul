@@ -16,6 +16,7 @@ public class TelaFornecedor extends javax.swing.JFrame {
      */
     public TelaFornecedor() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -37,7 +38,7 @@ public class TelaFornecedor extends javax.swing.JFrame {
         jButton43 = new javax.swing.JButton();
         jButton35 = new javax.swing.JButton();
         jButton46 = new javax.swing.JButton();
-        label1 = new java.awt.Label();
+        jButton27 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jCodFornecedor = new javax.swing.JTextField();
@@ -71,7 +72,7 @@ public class TelaFornecedor extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo_sistema.png"))); // NOI18N
 
         jButton25.setBackground(new java.awt.Color(38, 79, 90));
-        jButton25.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 22)); // NOI18N
+        jButton25.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         jButton25.setText("Tutores");
         jButton25.setContentAreaFilled(false);
         jButton25.addActionListener(new java.awt.event.ActionListener() {
@@ -81,7 +82,7 @@ public class TelaFornecedor extends javax.swing.JFrame {
         });
 
         jButton26.setBackground(new java.awt.Color(38, 79, 90));
-        jButton26.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 22)); // NOI18N
+        jButton26.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         jButton26.setText("Pacientes");
         jButton26.setContentAreaFilled(false);
         jButton26.addActionListener(new java.awt.event.ActionListener() {
@@ -91,35 +92,37 @@ public class TelaFornecedor extends javax.swing.JFrame {
         });
 
         jButton44.setBackground(new java.awt.Color(38, 79, 90));
-        jButton44.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 22)); // NOI18N
+        jButton44.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         jButton44.setText("Serviços");
         jButton44.setContentAreaFilled(false);
 
         jButton45.setBackground(new java.awt.Color(38, 79, 90));
-        jButton45.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 22)); // NOI18N
+        jButton45.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         jButton45.setText("Administração");
         jButton45.setContentAreaFilled(false);
 
         jButton43.setBackground(new java.awt.Color(38, 79, 90));
-        jButton43.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 22)); // NOI18N
+        jButton43.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         jButton43.setText("Pagamentos");
         jButton43.setContentAreaFilled(false);
 
         jButton35.setBackground(new java.awt.Color(38, 79, 90));
-        jButton35.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 22)); // NOI18N
+        jButton35.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         jButton35.setText("Fornecedores");
         jButton35.setContentAreaFilled(false);
 
         jButton46.setBackground(new java.awt.Color(38, 79, 90));
-        jButton46.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 22)); // NOI18N
+        jButton46.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         jButton46.setText("Estoque");
         jButton46.setContentAreaFilled(false);
 
-        label1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 22)); // NOI18N
-        label1.setText("Agenda");
-        label1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                label1MouseEntered(evt);
+        jButton27.setBackground(new java.awt.Color(38, 79, 90));
+        jButton27.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        jButton27.setText("Agenda");
+        jButton27.setContentAreaFilled(false);
+        jButton27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton27ActionPerformed(evt);
             }
         });
 
@@ -127,48 +130,42 @@ public class TelaFornecedor extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton25)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton26)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton44)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton43)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton35)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton46)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton45)))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addComponent(jButton27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton25)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton26)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton44)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton43)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton35)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton46)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton45))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton25)
-                        .addComponent(jButton26)
-                        .addComponent(jButton44)
-                        .addComponent(jButton43)
-                        .addComponent(jButton35)
-                        .addComponent(jButton46)
-                        .addComponent(jButton45))
-                    .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton25)
+                    .addComponent(jButton26)
+                    .addComponent(jButton44)
+                    .addComponent(jButton43)
+                    .addComponent(jButton35)
+                    .addComponent(jButton46)
+                    .addComponent(jButton45)
+                    .addComponent(jButton27))
+                .addGap(45, 45, 45))
         );
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Código Fornecedor:");
@@ -325,19 +322,21 @@ public class TelaFornecedor extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(146, 146, 146)
+                .addGap(70, 70, 70)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 897, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 682, Short.MAX_VALUE))
+                .addGap(0, 13, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -348,9 +347,7 @@ public class TelaFornecedor extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -364,9 +361,9 @@ public class TelaFornecedor extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton26ActionPerformed
 
-    private void label1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label1MouseEntered
+    private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_label1MouseEntered
+    }//GEN-LAST:event_jButton27ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -421,6 +418,7 @@ public class TelaFornecedor extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton25;
     private javax.swing.JButton jButton26;
+    private javax.swing.JButton jButton27;
     private javax.swing.JButton jButton35;
     private javax.swing.JButton jButton43;
     private javax.swing.JButton jButton44;
@@ -443,7 +441,6 @@ public class TelaFornecedor extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
-    private java.awt.Label label1;
     private javax.swing.JTextField txtBairro;
     private javax.swing.JTextField txtComplemento;
     private javax.swing.JTextField txtComplemento1;
