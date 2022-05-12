@@ -5,6 +5,8 @@
  */
 package visao;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author Maíra
@@ -17,6 +19,7 @@ public class TelaTutores extends javax.swing.JFrame {
     public TelaTutores() {
         initComponents();
         setLocationRelativeTo(null); //centraliza a janela
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     /**

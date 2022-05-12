@@ -6,26 +6,42 @@ package modelo;
  */
 public class Pessoa {
 
-    //declaração das variáveis
-    private String endereco, telefone;
-    
-    public String getEndereco() 
-    {
+    private String endereco, complemento, telefone;
+
+    public Pessoa() {
+        super();
+    }
+
+    public Pessoa(String endereco, String complemento, String telefone) {
+        super();
+        this.endereco = endereco;
+        this.complemento = complemento;
+        this.telefone = telefone;
+    }
+
+    public String getEndereco() {
         return endereco;
     }
 
-    public void setEndereco(String endereco) 
-    {
+    public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
 
-    public String getTelefone() 
-    {
+    public String getComplemento() {
+        return complemento;
+    }
+
+    public void setComplemento(String complemento) {
+        this.complemento = complemento;
+    }
+
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(String telefone) 
-    {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
-    }      
-}
+    }
+    
+    
+}   

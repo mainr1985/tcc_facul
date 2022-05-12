@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package principal;
-import visao.PrototipoLogin;
+import visao.TelaLogin;
 import javax.swing.JFrame;
 
 /**

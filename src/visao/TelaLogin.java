@@ -1,17 +1,23 @@
 package visao;
+
+import javax.swing.JOptionPane;
+import modelo.Veterinario;
+
 /**
  *
  * @author Maíra
  */
-public class PrototipoLogin extends javax.swing.JFrame {
+public class TelaLogin extends javax.swing.JFrame {
 
     /**
      * Creates new form PrototipoLogin
      */
-    public PrototipoLogin() {
+    public TelaLogin() {
         initComponents();
         setLocationRelativeTo(null); //centraliza a janela de login na tela
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setTitle("PetFree");
+        this.setSize(972, 550);
     }
 
     /**
@@ -118,17 +124,13 @@ public class PrototipoLogin extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(121, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(93, 93, 93))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -159,27 +161,24 @@ public class PrototipoLogin extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PrototipoLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PrototipoLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PrototipoLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PrototipoLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PrototipoLogin().setVisible(true);
+                new TelaLogin().setVisible(true);
     
             }
         });
-        
-        
-        
-        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -192,4 +191,61 @@ public class PrototipoLogin extends javax.swing.JFrame {
     private javax.swing.JPasswordField txtSenha;
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
+
+    public javax.swing.JButton getBtnLogin() {
+        return btnLogin;
+    }
+
+    public void setBtnLogin(javax.swing.JButton btnLogin) {
+        this.btnLogin = btnLogin;
+    }
+
+    public javax.swing.JPasswordField getTxtSenha() {
+        return txtSenha;
+    }
+
+    public void setTxtSenha(javax.swing.JPasswordField txtSenha) {
+        this.txtSenha = txtSenha;
+    }
+
+    public javax.swing.JTextField getTxtUsuario() {
+        return txtUsuario;
+    }
+
+    public void setTxtUsuario(javax.swing.JTextField txtUsuario) {
+        this.txtUsuario = txtUsuario;
+    }
+    
+    public Veterinario lerLogin()
+    {
+        {
+		Veterinario usuario = new Veterinario();
+		String nomeUsuario = txtUsuario.getText();
+		char[] senha = txtSenha.getPassword(); //pega a senha digitada 
+		
+		if(nomeUsuario.equals("") || nomeUsuario == null || senha.equals("") || senha == null)
+		{
+			JOptionPane.showMessageDialog(null, "Verifique o preenchimento obrigatório dos campos: Usuário e Senha!","Aviso",JOptionPane.WARNING_MESSAGE);
+			return null;
+		}
+		else
+			try{
+				usuario.setNomeUsuario(nomeUsuario);
+				usuario.setSenha(senha);
+			}
+		catch (NumberFormatException e)
+		{	
+			JOptionPane.showMessageDialog(null,"Formato inválido!","Aviso",JOptionPane.WARNING_MESSAGE) ;
+		}
+		
+		catch (Exception ex)
+		{	
+			JOptionPane.showMessageDialog(null,"Operação não realizada","Aviso",JOptionPane.WARNING_MESSAGE) ;
+		}
+		
+
+        
+        return usuario;
+        
+    }
 }
