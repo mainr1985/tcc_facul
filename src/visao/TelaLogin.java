@@ -216,7 +216,7 @@ public class TelaLogin extends javax.swing.JFrame {
         this.txtUsuario = txtUsuario;
     }
     
-    public Veterinario lerLogin()
+    /*public Veterinario lerLogin()
     {
         {
 		Veterinario usuario = new Veterinario();
@@ -225,27 +225,30 @@ public class TelaLogin extends javax.swing.JFrame {
 		
 		if(nomeUsuario.equals("") || nomeUsuario == null || senha.equals("") || senha == null)
 		{
-			JOptionPane.showMessageDialog(null, "Verifique o preenchimento obrigatório dos campos: Usuário e Senha!","Aviso",JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Verifique o preenchimento obrigatório dos campos: Usuário e Senha!","Aviso",JOptionPane.WARNING_MESSAGE);
 			return null;
 		}
 		else
 			try{
-				usuario.setNomeUsuario(nomeUsuario);
-				usuario.setSenha(senha);
+                            usuario.setNomeUsuario(nomeUsuario);
+                            usuario.setSenha(senha);
 			}
 		catch (NumberFormatException e)
 		{	
-			JOptionPane.showMessageDialog(null,"Formato inválido!","Aviso",JOptionPane.WARNING_MESSAGE) ;
+                    JOptionPane.showMessageDialog(null,"Formato inválido!","Aviso",JOptionPane.WARNING_MESSAGE) ;
 		}
 		
 		catch (Exception ex)
 		{	
-			JOptionPane.showMessageDialog(null,"Operação não realizada","Aviso",JOptionPane.WARNING_MESSAGE) ;
+                    JOptionPane.showMessageDialog(null,"Operação não realizada","Aviso",JOptionPane.WARNING_MESSAGE) ;
 		}
-		
-
-        
+		       
         return usuario;
+    }*/
+        
+       /* public void setOuvinte(ControleLogon controle)
+	{
+		btnLogin.addActionListener(controle);
+        }*/
         
     }
-}

@@ -7,7 +7,8 @@ import java.sql.Date;
  * @author Maíra & Rafael
  */
 public abstract class Funcionario extends Pessoa{
-    private String cpf, rg, nome, cargo, permissao, nomeUsuario, senha;
+    private String cpf, rg, nome, cargo, permissao, nomeUsuario;
+    private char[] senha;
     private java.sql.Date dtNascimento, dtAdmissao, dtDemissao;
     private int codFuncionario;
     
@@ -16,7 +17,10 @@ public abstract class Funcionario extends Pessoa{
         super();        
     }
 
-    public Funcionario(String cpf, String rg, String nome, String cargo, String permissao, String nomeUsuario, String senha, Date dtNascimento, Date dtAdmissao, Date dtDemissao, int codFuncionario, String endereco, String complemento, String telefone) {
+    public Funcionario(String cpf, String rg, String nome, String cargo, String permissao, 
+                       String nomeUsuario, char[] senha, Date dtNascimento, Date dtAdmissao, Date dtDemissao, 
+                       int codFuncionario, String endereco, String complemento, String telefone) 
+    {
         super(endereco, complemento, telefone);
         this.cpf = cpf;
         this.rg = rg;
@@ -79,11 +83,11 @@ public abstract class Funcionario extends Pessoa{
         this.nomeUsuario = nomeUsuario;
     }
 
-    public String getSenha() {
+    public char[] getSenha() {
         return senha;
     }
 
-    public void setSenha(String senha) {
+    public void setSenha(char[] senha) {
         this.senha = senha;
     }
 

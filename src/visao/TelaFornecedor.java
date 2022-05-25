@@ -38,10 +38,8 @@ public class TelaFornecedor extends javax.swing.JFrame {
         jButton26 = new javax.swing.JButton();
         jButton44 = new javax.swing.JButton();
         jButton45 = new javax.swing.JButton();
-        jButton43 = new javax.swing.JButton();
         jButton35 = new javax.swing.JButton();
         jButton46 = new javax.swing.JButton();
-        jButton27 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jCodFornecedor = new javax.swing.JTextField();
@@ -103,11 +101,6 @@ public class TelaFornecedor extends javax.swing.JFrame {
         jButton45.setText("Administração");
         jButton45.setContentAreaFilled(false);
 
-        jButton43.setBackground(new java.awt.Color(38, 79, 90));
-        jButton43.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
-        jButton43.setText("Pagamentos");
-        jButton43.setContentAreaFilled(false);
-
         jButton35.setBackground(new java.awt.Color(38, 79, 90));
         jButton35.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         jButton35.setText("Fornecedores");
@@ -118,37 +111,26 @@ public class TelaFornecedor extends javax.swing.JFrame {
         jButton46.setText("Estoque");
         jButton46.setContentAreaFilled(false);
 
-        jButton27.setBackground(new java.awt.Color(38, 79, 90));
-        jButton27.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
-        jButton27.setText("Agenda");
-        jButton27.setContentAreaFilled(false);
-        jButton27.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton27ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addComponent(jButton27)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton25)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton26)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton44)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton43)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton35)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton46)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton45))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jButton44)
+                        .addGap(2, 2, 2)
+                        .addComponent(jButton25)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton26)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton35)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton46)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton45)))
+                .addContainerGap(278, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -159,11 +141,9 @@ public class TelaFornecedor extends javax.swing.JFrame {
                     .addComponent(jButton25)
                     .addComponent(jButton26)
                     .addComponent(jButton44)
-                    .addComponent(jButton43)
                     .addComponent(jButton35)
                     .addComponent(jButton46)
-                    .addComponent(jButton45)
-                    .addComponent(jButton27))
+                    .addComponent(jButton45))
                 .addGap(45, 45, 45))
         );
 
@@ -364,10 +344,6 @@ public class TelaFornecedor extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton26ActionPerformed
 
-    private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton27ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -421,9 +397,7 @@ public class TelaFornecedor extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton25;
     private javax.swing.JButton jButton26;
-    private javax.swing.JButton jButton27;
     private javax.swing.JButton jButton35;
-    private javax.swing.JButton jButton43;
     private javax.swing.JButton jButton44;
     private javax.swing.JButton jButton45;
     private javax.swing.JButton jButton46;
