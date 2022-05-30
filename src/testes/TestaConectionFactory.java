@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package testes;
-import conexao.ConnectionFactory;
+import dao.ConnectionFactory;
 import java.sql.Connection;
 import java.sql.SQLException;
 

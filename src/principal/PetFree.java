@@ -6,6 +6,7 @@
 package principal;
 import visao.TelaLogin;
 import javax.swing.JFrame;
+import visao.TelaLogin;
 
 /**
  *
@@ -19,7 +20,8 @@ public class PetFree {
     public static void main(String[] args) {
         // TODO code application logic here
         //chamando a tela de login
-        
+        TelaLogin telaLogin = new TelaLogin(); 
+        telaLogin.setVisible(true);
         
         
     
