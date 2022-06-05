@@ -5,6 +5,7 @@
  */
 package controle;
 
+import javax.swing.JOptionPane;
 import modelo.Usuario;
 import modelo.Veterinario;
 import visao.TelaLogin;
@@ -17,9 +18,14 @@ import visao.TelaLogin;
 public class ControleLogin {
     TelaLogin login = new TelaLogin();
     
-    public boolean cadastrarLogin(String nomeUsuario, char[] senha){
+    public boolean cadastrarLoginVet(String nomeUsuario, char[] senha){
         if ((login.getTxtUsuario()!=null) && (login.getTxtSenha()!=null)){
-            Usuario usuario = new Usuario(nomeUsuario, nomeUsuario, funcionario);
+            Veterinario vet = new Veterinario();
+            Usuario usuario = new Usuario(nomeUsuario, nomeUsuario, vet);
+        }
+            
+            
+            
             
         }
     }

@@ -3,6 +3,8 @@ package visao;
 import javax.swing.JOptionPane;
 import modelo.Funcionario;
 import modelo.Veterinario;
+import controle.ControleLogin;
+import modelo.Usuario;
 
 /**
  *
@@ -136,26 +138,26 @@ public class TelaLogin extends javax.swing.JFrame {
 
     //enviando o login informado para o pacote Modelo 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-       Veterinario user = new Veterinario();
+       Usuario user = new Usuario()
         
 	//variáveis para pegar as informaçoes da tela
         String usuario = txtUsuario.getText();
         char[] senha = txtSenha.getPassword();
+        boolean sucesso;
         
         //validação
         if (usuario.equals("")||usuario==null || senha.equals("") || senha==null){
             JOptionPane.showMessageDialog(null, "Verifique o preenchimento obrigatório dos campos: Usuário e Senha","Aviso",JOptionPane.WARNING_MESSAGE);
         }
         else
-            if (usuario.contains("vet")) {
-                JOptionPane.showMessageDialog(null, "sou vet...");
-                                     
-                try{
-                    user.setNomeUsuario(usuario);
-                    user.setSenha(senha);                
-                }
-                catch(Exception e){
-                   JOptionPane.showMessageDialog(null, "Ocorreu algum erro, a operação não foi realizada");
+            try{
+                ControleLogin cl = new ControleLogin();
+                sucesso = usuario.cadastrarUsuario(codigo, tempMin, tempMax, tempMomento, txtResponsavel.getText()); //como os dados foram tratados acima, ta ok. 'responsavel' é texto então sem problemas
+                user.setNomeUsuario(usuario);
+                user.setSenha(senha);                
+            }
+            catch(Exception e){
+                JOptionPane.showMessageDialog(null, "Ocorreu algum erro, a operação não foi realizada");
                    //return null;
                 }
         }             
@@ -236,6 +238,10 @@ public class TelaLogin extends javax.swing.JFrame {
 
     public void setTxtUsuario(javax.swing.JTextField txtUsuario) {
         this.txtUsuario = txtUsuario;
+    }
+
+    public boolean contains(String vet) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 
