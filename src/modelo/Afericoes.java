@@ -11,11 +11,11 @@ package modelo;
  * @author Maíra
  */
 public class Afericoes {
-    private int codigo;
-    private double tempMin, tempMax, tempMomento;
+    private Integer codigo;
+    private Double tempMin, tempMax, tempMomento;
     private String responsavel;
     
-    public Afericoes(int codigo, double tempMin, double tempMax, double tempMomento, String responsavel) {
+    public Afericoes(Integer codigo, Double tempMin, Double tempMax, Double tempMomento, String responsavel) {
         this.codigo = codigo;
         this.tempMin = tempMin;
         this.tempMax = tempMax;
@@ -24,35 +24,35 @@ public class Afericoes {
     }
 
     
-    public int getCodigo() {
+    public Integer getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
+    public void setCodigo(Integer codigo) {
         this.codigo = codigo;
     }
 
-    public double getTempMin() {
+    public Double getTempMin() {
         return tempMin;
     }
 
-    public void setTempMin(double tempMin) {
+    public void setTempMin(Double tempMin) {
         this.tempMin = tempMin;
     }
 
-    public double getTempMax() {
+    public Double getTempMax() {
         return tempMax;
     }
 
-    public void setTempMax(double tempMax) {
+    public void setTempMax(Double tempMax) {
         this.tempMax = tempMax;
     }
 
-    public double getTempMomento() {
+    public Double getTempMomento() {
         return tempMomento;
     }
 
-    public void setTempMomento(double tempMomento) {
+    public void setTempMomento(Double tempMomento) {
         this.tempMomento = tempMomento;
     }
 

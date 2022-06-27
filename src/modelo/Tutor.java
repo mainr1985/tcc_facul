@@ -12,16 +12,21 @@ package modelo;
 public class Tutor extends Pessoa
 {
     private String nome, cpf, telCel, telResidencia;
-    private int codTutor;
+    private Integer codTutor;
     
     public Tutor(){
-        this.nome = "";
-        this.cpf = "";
-        this.telCel = "";
-        this.telResidencia = "";
         
     }
 
+    public Tutor(String nome, String cpf, String telCel, String telResidencia, Integer codTutor, String endereco, String complemento, String telefone) {
+        super(endereco, complemento, telefone);
+        this.nome = nome;
+        this.cpf = cpf;
+        this.telCel = telCel;
+        this.telResidencia = telResidencia;
+        this.codTutor = codTutor;
+    }
+    
     public String getNome() {
         return nome;
     }
@@ -54,13 +59,11 @@ public class Tutor extends Pessoa
         this.telResidencia = telResidencia;
     }
 
-    public int getCodTutor() {
+    public Integer getCodTutor() {
         return codTutor;
     }
 
-    public void setCodTutor(int codTutor) {
+    public void setCodTutor(Integer codTutor) {
         this.codTutor = codTutor;
-    }
-    
-    
+    }   
 }

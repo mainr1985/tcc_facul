@@ -10,7 +10,7 @@ import java.util.Date;
 public class Paciente {
     private String nome, raca;
     private Date nascimento;
-    private int idade;
+    private Integer idade;
     
     public void setNome (String nome)
     {
@@ -42,12 +42,12 @@ public class Paciente {
         return this.nascimento;
     }
     
-    public void setIdade(int idade)
+    public void setIdade(Integer idade)
     {
         this.idade = idade;
     }
     
-    public int getIdade()
+    public Integer getIdade()
     {
         return this.idade;
     }

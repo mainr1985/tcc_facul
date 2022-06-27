@@ -4,6 +4,8 @@ import javax.swing.JOptionPane;
 import modelo.Funcionario;
 import modelo.Veterinario;
 import controle.ControleLogin;
+import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
 import modelo.Usuario;
 
 /**
@@ -33,24 +35,18 @@ public class TelaLogin extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        txtUsuario = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txtSenha = new javax.swing.JPasswordField();
         btnLogin = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        txtUsuario = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel1.setBackground(new java.awt.Color(120, 184, 198));
-
-        txtUsuario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUsuarioActionPerformed(evt);
-            }
-        });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -79,20 +75,23 @@ public class TelaLogin extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(345, 345, 345)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(30, 30, 30)
-                        .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnLogin)
-                                .addGap(65, 65, 65)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap(479, Short.MAX_VALUE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(22, 22, 22)
+                                .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(183, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -105,10 +104,10 @@ public class TelaLogin extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
@@ -138,35 +137,11 @@ public class TelaLogin extends javax.swing.JFrame {
 
     //enviando o login informado para o pacote Modelo 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-       Usuario user = new Usuario()
-        
-	//variáveis para pegar as informaçoes da tela
-        String usuario = txtUsuario.getText();
-        char[] senha = txtSenha.getPassword();
-        boolean sucesso;
-        
-        //validação
-        if (usuario.equals("")||usuario==null || senha.equals("") || senha==null){
-            JOptionPane.showMessageDialog(null, "Verifique o preenchimento obrigatório dos campos: Usuário e Senha","Aviso",JOptionPane.WARNING_MESSAGE);
-        }
-        else
-            try{
-                ControleLogin cl = new ControleLogin();
-                sucesso = usuario.cadastrarUsuario(codigo, tempMin, tempMax, tempMomento, txtResponsavel.getText()); //como os dados foram tratados acima, ta ok. 'responsavel' é texto então sem problemas
-                user.setNomeUsuario(usuario);
-                user.setSenha(senha);                
-            }
-            catch(Exception e){
-                JOptionPane.showMessageDialog(null, "Ocorreu algum erro, a operação não foi realizada");
-                   //return null;
-                }
-        }             
-       
+         
+        //inserir código aqui
+         
+             
     }//GEN-LAST:event_btnLoginActionPerformed
-
-    private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -232,58 +207,21 @@ public class TelaLogin extends javax.swing.JFrame {
         this.txtSenha = txtSenha;
     }
 
-    public javax.swing.JTextField getTxtUsuario() {
-        return txtUsuario;
-    }
-
-    public void setTxtUsuario(javax.swing.JTextField txtUsuario) {
-        this.txtUsuario = txtUsuario;
-    }
-
     public boolean contains(String vet) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    public JTextField getTxtUsuario() {
+        return txtUsuario;
+    }
 
+    public void setTxtUsuario(JTextField txtUsuario) {
+        this.txtUsuario = txtUsuario;
+    }
 
-
-
-}
-    
-   /* public Veterinario lerLogin()
+    public void limpar()
     {
-        Veterinario user = new Veterinario();
-        
-	//variáveis para pegar as informaçoes da tela
-        String usuario = txtUsuario.getText();
-        char[] senha = txtSenha.getPassword();
-        
-        //validação
-        if (usuario.equals("")||usuario==null || senha.equals("") || senha==null){
-            JOptionPane.showMessageDialog(null, "Verifique o preenchimento obrigatório dos campos: Usuário e Senha","Aviso",JOptionPane.WARNING_MESSAGE);
-            return null;
-        }
-        else
-            if (usuario.contains("vet")) {
-                JOptionPane.showMessageDialog(null, "sou vet...");
-                
-                
-                      
-                try{
-                    user.setNomeUsuario(usuario);
-                    user.setSenha(senha);                
-                }
-                catch(Exception e){
-                   JOptionPane.showMessageDialog(null, "Ocorreu algum erro, a operação não foi realizada");
-                   //return null;
-                }
-        }   
-        
-       //return user;
-        
-    }}
-    
-/* public void setOuvinte(ControleLogon controle)
-	{
-		btnLogin.addActionListener(controle);
-        }*/
+        txtUsuario.setText("");
+	txtSenha.setText("");
+    }
+}

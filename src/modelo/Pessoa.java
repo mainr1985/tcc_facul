@@ -41,7 +41,5 @@ public class Pessoa {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
-    }
-    
-    
+    }    
 }   

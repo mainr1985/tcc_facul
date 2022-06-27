@@ -10,16 +10,16 @@ public abstract class Funcionario extends Pessoa{
     private String cpf, rg, nome, cargo, permissao, nomeUsuario;
     private char[] senha;
     private java.sql.Date dtNascimento, dtAdmissao, dtDemissao;
-    private int codFuncionario;
+    private Integer codFuncionario;
     
+    //construtor vazio
     public Funcionario ()
-    {
-        super();        
+    {            
     }
 
     public Funcionario(String cpf, String rg, String nome, String cargo, String permissao, 
                        String nomeUsuario, char[] senha, Date dtNascimento, Date dtAdmissao, Date dtDemissao, 
-                       int codFuncionario, String endereco, String complemento, String telefone) 
+                       Integer codFuncionario, String endereco, String complemento, String telefone) 
     {
         super(endereco, complemento, telefone);
         this.cpf = cpf;
@@ -115,11 +115,11 @@ public abstract class Funcionario extends Pessoa{
         this.dtDemissao = dtDemissao;
     }
 
-    public int getCodFuncionario() {
+    public Integer getCodFuncionario() {
         return codFuncionario;
     }
 
-    public void setCodFuncionario(int codFuncionario) {
+    public void setCodFuncionario(Integer codFuncionario) {
         this.codFuncionario = codFuncionario;
     }
 }
