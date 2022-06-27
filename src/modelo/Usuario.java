@@ -6,35 +6,33 @@ package modelo;
  */
 public class Usuario {
         private String usuario;
-    	private String senha;	 
+    	private char[] senha;	 
 	private String permissao;	 
 	private Funcionario funcionario;
 
     public Usuario() {
     }
         
-    public Usuario(String usuario, String senha){
+    public Usuario(String usuario, char[] senha){
         this.usuario = usuario;
         this.senha = senha;
     }
-
     
-   /* public Usuario(String usuario, String senha, String permissao, Funcionario funcionario) {
+    public Usuario(String usuario, char[] senha, String permissao, Funcionario funcionario) {
         this.usuario = usuario;
         this.senha = senha;
         this.permissao = permissao;
         this.funcionario = funcionario;
-    }*/
-
-    public Usuario(String usuario, char[] senha) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public String getSenha() {
+    
+    
+    
+    public char[] getSenha() {
         return senha;
     }
 
-    public void setSenha(String senha) {
+    public void setSenha(char[] senha) {
         this.senha = senha;
     }
 
@@ -69,7 +67,7 @@ public class Usuario {
     }
 
     public void cadastrarUsuario(Usuario user) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       
     }
     
     
