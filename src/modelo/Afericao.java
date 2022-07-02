@@ -1,28 +1,21 @@
 package modelo;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  *
  * @author Maíra
  */
-public class Afericoes {
+public class Afericao {
     private Integer codigo;
     private Double tempMin, tempMax, tempMomento;
-    private String responsavel;
+    private Veterinario responsavel;
     
-    public Afericoes(Integer codigo, Double tempMin, Double tempMax, Double tempMomento, String responsavel) {
+    public Afericao(Integer codigo, Double tempMin, Double tempMax, Double tempMomento, Veterinario responsavel) {
         this.codigo = codigo;
         this.tempMin = tempMin;
         this.tempMax = tempMax;
         this.tempMomento = tempMomento;
         this.responsavel = responsavel;
     }
-
     
     public Integer getCodigo() {
         return codigo;
@@ -56,16 +49,15 @@ public class Afericoes {
         this.tempMomento = tempMomento;
     }
 
-    public String getResponsavel() {
+    public Veterinario getResponsavel() {
         return responsavel;
     }
 
-    public void setResponsavel(String responsavel) {
+    public void setResponsavel(Veterinario responsavel) {
         this.responsavel = responsavel;
     }
     
-    public void cadastrarMedicao(Afericoes temperatura){
+    public void cadastrarMedicao(Afericao temperatura){
         
-    }
-    
+    }    
 }

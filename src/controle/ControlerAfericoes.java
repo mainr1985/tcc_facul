@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package controle;
-import modelo.Afericoes;
+import modelo.Afericao;
 import visao.Menu;
 /**
  *
@@ -18,7 +18,7 @@ public class ControlerAfericoes {
         
         if ((temperatura.getTxtTempMin()!=null) && (temperatura.getTxtTempMax()!=null) 
              && (temperatura.getTxtTempMomento()!=null) && (temperatura.getTxtResp()!= null)){
-            Afericoes t = new Afericoes(codigo, tempMin, tempMax, tempMomento, responsavel);
+            Afericao t = new Afericao(codigo, tempMin, tempMax, tempMomento, responsavel);
             t.cadastrarMedicao(t);
             return true;
         }

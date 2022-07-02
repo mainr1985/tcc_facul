@@ -1,6 +1,6 @@
 package modelo;
 
-import java.sql.Date;
+import java.util.Date;
 
 /**
  *
@@ -9,8 +9,9 @@ import java.sql.Date;
 public abstract class Funcionario extends Pessoa{
     private String cpf, rg, nome, cargo, permissao, nomeUsuario;
     private char[] senha;
-    private java.sql.Date dtNascimento, dtAdmissao, dtDemissao;
+    private Date dtNascimento, dtAdmissao, dtDemissao;
     private Integer codFuncionario;
+    
     
     //construtor vazio
     public Funcionario ()
@@ -19,9 +20,9 @@ public abstract class Funcionario extends Pessoa{
 
     public Funcionario(String cpf, String rg, String nome, String cargo, String permissao, 
                        String nomeUsuario, char[] senha, Date dtNascimento, Date dtAdmissao, Date dtDemissao, 
-                       Integer codFuncionario, String endereco, String complemento, String telefone) 
+                       Integer codFuncionario, String endereco, String complemento, String telefone, String email) 
     {
-        super(endereco, complemento, telefone);
+        super(endereco, complemento, telefone, email);
         this.cpf = cpf;
         this.rg = rg;
         this.nome = nome;
@@ -91,27 +92,27 @@ public abstract class Funcionario extends Pessoa{
         this.senha = senha;
     }
 
-    public java.sql.Date getDtNascimento() {
+    public Date getDtNascimento() {
         return dtNascimento;
     }
 
-    public void setDtNascimento(java.sql.Date dtNascimento) {
+    public void setDtNascimento(Date dtNascimento) {
         this.dtNascimento = dtNascimento;
     }
 
-    public java.sql.Date getDtAdmissao() {
+    public Date getDtAdmissao() {
         return dtAdmissao;
     }
 
-    public void setDtAdmissao(java.sql.Date dtAdmissao) {
+    public void setDtAdmissao(Date dtAdmissao) {
         this.dtAdmissao = dtAdmissao;
     }
 
-    public java.sql.Date getDtDemissao() {
+    public Date getDtDemissao() {
         return dtDemissao;
     }
 
-    public void setDtDemissao(java.sql.Date dtDemissao) {
+    public void setDtDemissao(Date dtDemissao) {
         this.dtDemissao = dtDemissao;
     }
 
@@ -121,5 +122,13 @@ public abstract class Funcionario extends Pessoa{
 
     public void setCodFuncionario(Integer codFuncionario) {
         this.codFuncionario = codFuncionario;
+    }
+    
+    public void validaUsuario(){
+        
+    }
+    
+    public void cadastrarUsuario(){
+        
     }
 }

@@ -18,8 +18,9 @@ public class Tutor extends Pessoa
         
     }
 
-    public Tutor(String nome, String cpf, String telCel, String telResidencia, Integer codTutor, String endereco, String complemento, String telefone) {
-        super(endereco, complemento, telefone);
+    public Tutor(String nome, String cpf, String telCel, String telResidencia, Integer codTutor, 
+                 String endereco, String complemento, String telefone, String email) {
+        super(endereco, complemento, telefone, email);
         this.nome = nome;
         this.cpf = cpf;
         this.telCel = telCel;

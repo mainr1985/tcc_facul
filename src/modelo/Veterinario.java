@@ -21,11 +21,17 @@ public class Veterinario extends Funcionario{
         this.crmv = crmv;
     }
 
-    public Veterinario(String crmv, String cpf, String rg, String nome, String cargo, String permissao, String nomeUsuario, Character[] senha, java.sql.Date dtNascimento, java.sql.Date dtAdmissao, java.sql.Date dtDemissao, int codFuncionario, String endereco, String complemento, String telefone) 
-    {
-        super(cpf, rg, nome, cargo, permissao, nomeUsuario, senha, dtNascimento, dtAdmissao, dtDemissao, codFuncionario, endereco, complemento, telefone);
+    public Veterinario(String crmv, String cpf, String rg, String nome, String cargo, 
+                       String permissao, String nomeUsuario, char[] senha, 
+                       java.util.Date dtNascimento, java.util.Date dtAdmissao, 
+                       java.util.Date dtDemissao, Integer codFuncionario, String endereco, 
+                       String complemento, String telefone, String email) {
+        
+        super(cpf, rg, nome, cargo, permissao, nomeUsuario, senha, dtNascimento, dtAdmissao, dtDemissao, codFuncionario, endereco, complemento, telefone, email);
         this.crmv = crmv;
     }
+
+    
     
     public String getCrmv() {
         return crmv;

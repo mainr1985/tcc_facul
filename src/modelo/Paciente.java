@@ -8,9 +8,11 @@ import java.util.Date;
  * @author Maíra
  */
 public class Paciente {
+    
     private String nome, raca;
     private Date nascimento;
     private Integer idade;
+    private Tutor tutor;
     
     public void setNome (String nome)
     {
@@ -51,5 +53,12 @@ public class Paciente {
     {
         return this.idade;
     }
-    
+
+    public Tutor getTutor() {
+        return tutor;
+    }
+
+    public void setTutor(Tutor tutor) {
+        this.tutor = tutor;
+    }   
 }
