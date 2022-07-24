@@ -5,13 +5,14 @@
  */
 package modelo;
 
-import java.sql.Date;
+import java.util.Date;
 
 /**
  *
  * @author Maíra
  */
 public class Veterinario extends Funcionario{
+    
     private String crmv;
 
     public Veterinario(){
@@ -29,9 +30,7 @@ public class Veterinario extends Funcionario{
         
         super(cpf, rg, nome, cargo, permissao, nomeUsuario, senha, dtNascimento, dtAdmissao, dtDemissao, codFuncionario, endereco, complemento, telefone, email);
         this.crmv = crmv;
-    }
-
-    
+    }    
     
     public String getCrmv() {
         return crmv;
